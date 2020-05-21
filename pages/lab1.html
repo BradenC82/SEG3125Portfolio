@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <title>Lab 1 Survey</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <nav class="top-navigation">
+                <div class="logo-wrapper">
+                    <h1 class="logo"> Analysis and Design of User Interfaces<h1>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/index.html">Assignments</a></li>
+                    <li><a href="/pages/lab1.html">Labs</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="pageWrapper">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <h1 style="margin:0 ">Help us improve Github!</h1>
+                <h2 style>Lab 1 Survey</h2>
+            </div>
+
+            <a href="https://github.com/">https://github.com/</a>
+            
+            <a href="https://github.com/">
+                <img src="../assets/github.png">
+            </a>
+            
+            
+    
+            <form class="form" style="margin-top: 0.5rem;" action="/index.html">
+    
+            <div class="card">
+    
+                <h2>Personal Information</h2>
+    
+     
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname">
+                    
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname">
+                    
+                    <label for="gender">Gender:</label>
+                    <input type="text" id="gender" name="gender">
+                    
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age">
+    
+    
+            </div>
+    
+    
+            <div class="card">
+    
+                <h2>What did you think about the sign up process?</h2>
+                    <input type="text" id="fname" name="fname" style="margin-top: 1rem;">
+    
+    
+    
+            </div>
+    
+            <div class="card" >
+    
+                <h2>Have you used this site before?</h2>
+    
+                <div id="yesNo">
+                    <div style="margin-right:0.5rem">
+                        <label for="yes_no">Yes </label>
+                        <input type="radio" id="fname" name="yes_no" checked>
+                    </div>
+                    
+                    <div>
+                        <label for="yes_no">No </label>
+                    <input type="radio" id="lname" name="yes_no">
+                    </div>
+                    
+                </div>
+    
+            </div>
+    
+    
+            <div class="card" >
+    
+                <h2>Which of the following pages did you find most intuitive?</h2>
+    
+                <div class="questions" >
+                    
+                    <select name="cars" id="cars">
+                        <option value="volvo">Home</option>
+                        <option value="saab">Explore</option>
+                        <option value="opel">Pricing</option>
+                        <option value="audi">Marketplace</option>
+                      </select>
+                    
+                </div>
+    
+            </div>
+    
+            <div class="card" >
+    
+                <h2>Which of the following features perfom reliably? (select all that apply)</h2>
+    
+                <div  class="questions">
+                    
+                    <div class="checkboxQ" >
+                        <input type="checkbox" id="fname" name="fname">
+                        <label for="fname">Pull requests</label>
+                    </div>
+    
+                    <div class="checkboxQ">
+                        <input type="checkbox" id="fname" name="fname">
+                        <label for="fname">Issue tracker</label>
+                    </div>
+                    
+                    <div class="checkboxQ">
+                        <input type="checkbox" id="fname" name="fname">
+                        <label for="fname">Gists</label>
+                    </div>
+    
+                    <div class="checkboxQ">
+                        <input type="checkbox" id="fname" name="fname">
+                        <label for="fname">Repositories</label>
+                    </div>
+                    
+                </div>
+    
+            </div>
+    
+    
+            <div class="card" >
+    
+                <h2>How would you rate the usability of the explore page?</h2>
+    
+                <div class="questions">
+                    <div style="margin-right:0.5rem">
+                        <input type="radio" id="fname" name="yes_no" checked>
+                        <label for="yes_no">unsuable</label>
+                        
+                    </div>
+                    
+                    <div>
+                        <input type="radio" id="lname" name="yes_no">
+                        <label for="yes_no">barely usable </label>
+                        
+                    </div>
+    
+                    <div>
+                        <input type="radio" id="lname" name="yes_no">
+                        <label for="yes_no">adequately usable </label>
+                        
+                    </div>
+    
+                    <div>
+                        <input type="radio" id="lname" name="yes_no">
+                        <label for="yes_no">very usable </label>
+                        
+                    </div>
+    
+                    <div>
+                        <input type="radio" id="lname" name="yes_no">
+                        <label for="yes_no">extremely usable </label>
+                        
+                    </div>
+                    
+                    
+                </div>
+    
+            </div>
+    
+            <div class="card" >
+    
+                <h2>Additional Comments</h2>
+                
+                <textarea rows="4" cols="50" ></textarea>
+    
+            </div>
+    
+            <input class="submitButton" type="submit" value="Submit">
+            
+        </input>
+         
+    
+        </form>
+        </div>
+
+        
+
+
+    </div>
+
+    <footer style="background-color: #2d3748; margin-top: 1rem;">
+        <div class="container" style="height: 100px; background-color: #2d3748; display: flex; align-items: center;"> 
+            <h2>Designed and developed by Braden Collingwood.</h2>
+
+        </div>
+    </footer>
+</body>
+</html>
