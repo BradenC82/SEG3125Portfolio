@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css">
+    <link href="./styles/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <title>Lab 2 Survey</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <nav class="top-navigation">
+                <div class="logo-wrapper">
+                    <h1 class="logo"> Analysis and Design of User Interfaces<h1>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="/index.html">Home</a></li>
+
+                    <li><a href="/pages/labs/lab1/index.html">Lab1</a></li>
+                    <li><a href="/pages/labs/lab2/index.html">Lab2</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="pageWrapper">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <h1 style="margin:0 ">Super Duper Mart</h1>
+                <h2 style>Lab 2 Grocery</h2>
+            </div>
+
+            <div class="tab">
+                <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+                <button class="tablinks" onclick="openInfo(event, 'Products'); populateListProductChoices(this.id, 'displayProduct');">Products</button>
+                <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+              </div>
+              
+              <!-- Tab content -->
+              <div id="Client" class="tabcontent">
+                <h2>Client Information:</h2>
+                
+                  <div class="card" >
+                        <h2>Tell us a bit about you</h2>
+
+
+                            <label for="fname">Choose a Catagory:</label>
+
+                            <select id="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+                                <option value=""></option>
+                                <option value="Vegetarian">Vegetarian</option>
+                                <option value="GlutenFree">GlutenFree</option>
+                                <option value="Vegetarian & GlutenFree">Vegetarian & GlutenFree</option>
+                                <option value="None">None</option>
+                            </select>
+                            
+                            <div class="checkboxQ" >
+                                <label >Do you prefer organic foods? </label>
+                                <input type="checkbox" id="organic"  onchange="populateListProductChoices(this.id, 'displayProduct')">
+                            </div> 
+             
+                             
+                   </div>
+
+              </div>
+              
+              <div id="Products" class="tabcontent">
+                <h2>Your targeted products:</h2>
+                <div class="card" >
+                   <p style="padding:0">We preselected products based on your restrictions.</p>
+                   <p>Choose items to buy:</p>
+                   <div id="displayProduct"></div>
+                   <button id="addCart" type="button" class="submitButton block" onclick="selectedItems()">
+                      Add selected items to cart.
+                  </button>
+                </div>
+                
+              </div>
+              
+              <div id="Cart" class="tabcontent">
+                <h2>Cart:</h2>
+                <div class="card" >
+                    <h2>Here is your cart:</h2>
+                    <div id="displayCart"></div>
+                </div>
+              </div>
+
+            
+        </div>
+
+        
+
+
+    </div>
+
+    <footer style="background-color: #2d3748; margin-top: 1rem;">
+        <div class="container" style="height: 100px; background-color: #2d3748; display: flex; align-items: center;"> 
+            <h2>Designed and developed by Braden Collingwood.</h2>
+
+        </div>
+    </footer>
+    <script src="scripts/groceries.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

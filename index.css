@@ -47,6 +47,7 @@ h2{
 
 p, label, input{
     font-family: 'Roboto', sans-serif;
+    margin: 0.25rem 0;
 }
 
 li{
@@ -135,6 +136,8 @@ form{
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
+    border: none;
+    border-radius: 5px;
 }
 
 .submitButton:hover{
@@ -143,6 +146,7 @@ form{
 
 .pageWrapper{
     margin: 2rem 0 0 0;
+    min-height: 100vh;
 }
 
 .logo{
