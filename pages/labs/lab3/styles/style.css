@@ -1,0 +1,89 @@
+/* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #303949;
+  margin-top: 1rem;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  color: #fff;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #317ce2;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #317ce2;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 1rem 0.5rem;
+
+  border-top: none;
+  
+}
+
+#displayProduct{
+  display:flex;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+#displayCart p{
+  color:#a0aec0;
+}
+
+
+.productCard{
+    padding: 1rem 1rem;
+    width: 10rem;
+    margin: 1rem 1rem;
+    border-radius: 10px;
+    background: #2d3748;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+.wrapper{
+  width: 100%;
+}
+.productInfo{
+  padding:1rem 0 2rem 0;
+}
+
+.productImage{
+  padding: 0;
+  margin:0;
+  object-fit: cover;
+}
+
+.addToCartBtn{
+    color:#fff;
+    background-color: #2e7de3;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}

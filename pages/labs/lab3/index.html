@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css">
+    <link href="./styles/style.css" rel="stylesheet" type="text/css">
+    <link href="../../../index.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <title>Lab 3 Grocery</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <nav class="top-navigation">
+                <div class="logo-wrapper">
+                    <h1 class="logo"> Analysis and Design of User Interfaces<h1>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="../../../index.html">Home</a></li>
+                    <li><a href="../lab1/index.html">Lab1</a></li>
+                    <li><a href="../lab2/index.html">Lab2</a></li>
+                    <li><a href="../lab3/index.html">Lab3</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="pageWrapper">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <h1 style="margin:0 ">Super Duper Mart</h1>
+                <h2 style>Lab 3 Grocery</h2>
+            </div>
+
+            <div class="tab">
+                <button id="ClientTab" class="tablinks" onclick="openInfo(event, 'Client')"> 1. Preferences</button>
+                <button id="ProductsTab" class="tablinks" onclick="openInfo(event, 'Products'); populateListProductChoices(null, 'displayProduct');">2. Products</button>
+                <button id="CartTab" class="tablinks" onclick="openInfo(event, 'Cart'); selectedItems();">3. Cart</button>
+              </div>
+              
+              <!-- Tab content -->
+              <div id="Client" class="tabcontent">
+                <h2>Shopping preferences:</h2>
+                
+                  <div class="card" >
+                        <h2>Dietary preferences</h2>
+
+                            <div class="checkboxQ" >
+                                <label >Would you like to only view Vegetarian options? </label>
+                                <input type="checkbox" id="vegetarian"  onchange="populateListProductChoices(null, 'displayProduct')">
+                            </div> 
+
+                            <div class="checkboxQ" >
+                                <label >Would you like to only view GlutenFree options </label>
+                                <input type="checkbox" id="glutenFree"  onchange="populateListProductChoices(null, 'displayProduct')">
+                            </div> 
+                            
+                            <div class="checkboxQ" >
+                                <label >Would you like to only view Organic options? </label>
+                                <input type="checkbox" id="organic"  onchange="populateListProductChoices(null, 'displayProduct')">
+                            </div> 
+             
+                             
+                   </div>
+
+                   <button id="next" type="button" class="submitButton block" onclick="openInfo(event, 'Products'); populateListProductChoices(null, 'displayProduct');">
+                      Next
+                  </button>
+
+
+
+              </div>
+              
+              <div id="Products" class="tabcontent">
+
+                  
+                <h2>Your suggested products:</h2>
+                <div>
+                   <p style="padding:0">We preselected products based on your preferences.</p>
+                   <p style="margin-top: 1rem;">Categories:</p>
+                   <div class="tab" style="width:max-content; margin-top:0.25rem">
+                    <button class="tablinks" onclick="populateListProductChoices( null, 'displayProduct');">All</button>
+                    <button class="tablinks" onclick="populateListProductChoices('vegetables and legumes', 'displayProduct');">Vegetables and Legumes</button>
+                    <button class="tablinks" onclick="populateListProductChoices('lean meats and poultry', 'displayProduct');">Lean meats and poultry</button>
+                    <button class="tablinks" onclick="populateListProductChoices('grain', 'displayProduct');">Grain</button>
+                    <button class="tablinks" onclick="populateListProductChoices('dairy', 'displayProduct');">Dairy</button>
+                    <button class="tablinks" onclick="populateListProductChoices('other', 'displayProduct');">Other</button>
+                  </div>
+                   <div id="displayProduct"></div>
+                   
+                </div>
+
+                <button id="prev" type="button" class="submitButton block" onclick="openInfo(event, 'Client')">
+                    Prev
+                   </button>
+
+                   <button id="next" type="button" class="submitButton block" onclick="openInfo(event, 'Cart'); selectedItems();">
+                      Next
+                  </button>
+                
+              </div>
+              
+              <div id="Cart" class="tabcontent">
+                <h2>Cart:</h2>
+                <div class="card" >
+                    <h2>Here is your cart:</h2>
+                    <div id="displayCart"></div>
+                </div>
+
+                <button id="prev" type="button" class="submitButton block" onclick="openInfo(event, 'Products'); populateListProductChoices(null, 'displayProduct');">
+                    Prev
+                </button>
+              </div>
+
+            
+        </div>
+
+        
+
+
+    </div>
+
+    <footer style="background-color: #2d3748; margin-top: 1rem;">
+        <div class="container" style="height: 100px; background-color: #2d3748; display: flex; align-items: center;"> 
+            <h2>Designed and developed by Braden Collingwood.</h2>
+
+        </div>
+    </footer>
+    <script src="scripts/groceries.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
