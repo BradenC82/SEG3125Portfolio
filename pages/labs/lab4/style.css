@@ -71,3 +71,8 @@
     background-color: #b40324 !important;
     border-color: #b40324 !important;
 }
+
+.btn-primary.focus, .btn-primary:focus{
+    box-shadow: 0 0 0 .2rem rgba(150, 0, 0, 0.486) !important;
+}
+
