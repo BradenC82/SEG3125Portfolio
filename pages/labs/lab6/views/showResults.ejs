@@ -1,0 +1,49 @@
+<html lang="en-US">
+<head>
+    <title>Survey Analysis</title>
+</head>
+
+<body>
+    <h1>Survey analysis</h1>
+    <h2>Genders</h2>
+    <ul>
+        <% for (var key of Object.keys(results.gender)) { %>
+            <li><%= key %> :  <%= results.gender[key] %></li>
+        <% }; %>
+    </ul>
+
+    <h2>Average age</h2>
+    <p> <%= results.age.reduce(function(a, b){return a + b;}, 0)/results.age.length; %></p>
+
+    <h2>Used site before</h2>
+    <p><%= results.used_site %></p>
+
+    <h2>Most Intuitive page</h2>
+    <ul>
+        <% for (var key of Object.keys(results.intuitive_pages)) { %>
+            <li><%= key %> :  <%= results.intuitive_pages[key] %></li>
+        <% }; %>
+    </ul>
+
+    <h2>Features that are reliable</h2>
+    <ul>
+        <% for (var key of Object.keys(results.features)) { %>
+            <li><%= key %> :  <%= results.features[key] %></li>
+        <% }; %>
+    </ul>
+
+    <h2>Usability of the explore page</h2>
+    <ul>
+        <% for (var key of Object.keys(results.usability)) { %>
+            <li><%= key %> :  <%= results.usability[key] %></li>
+        <% }; %>
+    </ul>
+
+    <h2>Login opinions</h2>
+
+    <% for( var i=0; i < results.login_opinion.length; i++){ %>
+        <p><%= results.login_opinion[i] %></p>
+    <% }; %>
+
+</body>
+</html>

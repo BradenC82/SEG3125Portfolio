@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>  
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/assets/style.css">
+    <title>Lab 6 Survey</title>
+</head>
+<body>
+    <div class="container">
+    
+        <nav class="top-navigation" style="align-items: center; padding-top: 2rem;">
+            <div class="logo-wrapper">
+                <h1 class="logo"> Analysis and Design of User Interfaces<h1>
+            </div>
+            <ul class="nav-list" style="margin: 0; padding: 0;">
+                <li><a href="../../../index.html">Home</a></li>
+                <li><a href="./index.html">Lab1</a></li>
+                <li><a href="../lab2/index.html">Lab2</a></li>
+                <li><a href="../lab3/index.html">Lab3</a></li>
+                <li><a href="../lab4/index.html">Lab4</a></li>
+                <li><a href="../lab5/index.html">Lab5</a></li>
+            </ul>
+        </nav>
+       
+
+        <div class="pageWrapper">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <h1 style="margin:0 ">Help us improve Github!</h1>
+                <h2 style>Lab 6 Survey</h2>
+            </div>
+
+            <a href="https://github.com/">https://github.com/</a>
+            
+            <a href="https://github.com/"><img src="/assets/github.png"></a>
+            
+            <form id="form" style="margin-top: 0.5rem;" action="/index.html">
+    
+                <div class="card form-group">
+                    <h2>Personal Information</h2>
+                    <label for="fname">*First name:</label>
+                    
+                    <input class="form-control" type="text" id="fname" name="fname" placeholder="John" required>
+                    
+                    <label for="lname">*Last name:</label>
+                    <input class="form-control" type="text" id="lname" name="lname" placeholder="Titor" required> 
+                    
+                    <label for="gender">Gender:</label>
+                    <select style="width: auto" class="form-control" name="gender" id="gender">
+                        <option selected disabled value="">Choose...</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                    
+                    <label for="age">*Age:</label>
+                    <input class="form-control" type="number" id="age" name="age" min="0" required>
+                    <p style="color:#a0aec0">*required fields</p>
+                </div>
+
+
+                <div class="card" >
+                    <h2>Have you used this site before?</h2>
+                    <div id="yesNo">
+                        <div style="margin-right:0.5rem">
+                            <label for="used_site_yes">Yes </label>
+                            <input type="radio" id="used_site_yes" name="used_site" value="yes">
+                        </div>
+
+                        <div>
+                            <label for="uesed_site_no">No </label>
+                            <input type="radio" id="used_site_no" name="used_site" value="nono">
+                        </div>
+                    </div>
+                </div>
+        
+        
+                <div class="card">
+                    <h2>What did you think about the sign up/login process?</h2>
+                    <textarea class="form-control" rows="4" cols="50" id="login_opinion" name="login_opinion" placeholder="Ex. fast, intuitive, secure, etc..." style="margin-top: 1rem;"></textarea>
+                </div>
+        
+
+                <div class="card" >    
+                    <h2>Which of the following pages did you find most intuitive?</h2>
+                    <div class="questions" >
+                        <select class="form-control" name="intuitive_pages" id="intuitive_pages">
+                            <option selected disabled value="">Choose...</option>
+                            <option value="home">Home</option>
+                            <option value="explore">Explore</option>
+                            <option value="pricing">Pricing</option>
+                            <option value="marketplace">Marketplace</option>
+                        </select>
+                    </div>
+                </div>
+        
+                <div class="card" >
+                    <h2>Which of the following features perform reliably? (select all that apply)</h2>
+                    <div  class="questions">
+                        <div class="checkboxQ" >
+                            <input type="checkbox" id="pull_request" name="features" value="pull_requests">
+                            <label for="pull_request">Pull requests</label>
+                        </div>
+        
+                        <div class="checkboxQ">
+                            <input type="checkbox" id="issue_tracker" name="features" value="issue_tracker">
+                            <label for="issue_tracker">Issue tracker</label>
+                        </div>
+                        
+                        <div class="checkboxQ">
+                            <input type="checkbox" id="gists" name="features" value="gists">
+                            <label for="gists">Gists</label>
+                        </div>
+        
+                        <div class="checkboxQ">
+                            <input type="checkbox" id="respositories" name="features" value="repositories">
+                            <label for="respositories">Repositories</label>
+                        </div>
+                    </div>
+                </div>
+        
+        
+                <div class="card" >
+                    <h2>How would you rate the usability of the explore page?</h2>
+                    <div class="questions">
+                        <div style="margin-right:0.5rem">
+                            <input type="radio" id="unusable" name="usability" value="unusable">
+                            <label for="unusable">unusable</label>
+                        </div>
+                        
+                        <div>
+                            <input type="radio" id="barely_usable" name="usability" value="barely_usable">
+                            <label for="barely usable">barely usable</label>
+                        </div>
+        
+                        <div>
+                            <input type="radio" id="adequately_usable" name="usability" value="adequately_usable">
+                            <label for="adequately_usable">adequately usable</label>
+                        </div>
+        
+                        <div>
+                            <input type="radio" id="very_usable" name="usability" value="very_usable">
+                            <label for="very_usable">very usable</label>
+                        </div>
+        
+                        <div>
+                            <input type="radio" id="extremely_usable" name="usability" value="extremely_usable">
+                            <label for="extremely_usable">extremely usable</label>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="card" >
+                    <h2>Additional Comments</h2>
+                    <textarea class="form-control" rows="4" cols="50" id="additional_comments" name="additional_comments" placeholder="Let us know what you think!" ></textarea>
+                </div>
+        
+                <button class="submitButton" type="submit" id="submit" value="Submit">Submit</button>
+                
+            </form>
+        </div>
+
+    </div>
+
+    <footer style="background-color: #2d3748; margin-top: 1rem;">
+        <div class="container" style="height: 100px; background-color: #2d3748; display: flex; align-items: center;"> 
+            <h2>Designed and developed by Braden Collingwood.</h2>
+        </div>
+    </footer>
+
+    <script src="/assets/action.js"></script>
+
+</body>
+</html>
